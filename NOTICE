@@ -1,0 +1,45 @@
+Where the canopy runs out: the City of Melbourne's council trees, their shade and when their useful life ends.
+Copyright 2026 Craig Muldoon. Made with Plotlay (https://www.getplotlay.com).
+
+This repository contains code, data we made, and data from the sources below.
+
+CODE
+  The notebook and the Power BI project (its Power Query, DAX and report files) are licensed under the MIT licence
+  (LICENSE).
+
+DATA WE MADE
+  The block, street and precinct shapes in data/geometry/ (with their formula and roll-up columns) and the tables in
+  data/trees/ (each tree's share of the 2021 canopy and the year its useful life ends by) are licensed under Creative
+  Commons Attribution 4.0 International (LICENSE-DATA). Please credit: "Blocks, streets and canopy shares: Plotlay
+  (getplotlay.com), from City of Melbourne open data". They are made from the sources below, whose credits also apply.
+
+UPSTREAM SOURCES
+
+  City of Melbourne Open Data, data.melbourne.vic.gov.au. Licensed under Creative Commons Attribution 4.0
+  International (CC BY 4.0), https://creativecommons.org/licenses/by/4.0/
+    - Trees, with species and dimensions (Urban Forest), updated 22 September 2025
+      https://data.melbourne.vic.gov.au/explore/dataset/trees-with-species-and-dimensions-urban-forest/
+    - Tree Canopies 2021 (Urban Forest)
+      https://data.melbourne.vic.gov.au/explore/dataset/tree-canopies-2021-urban-forest/
+    - Blocks for Census of Land Use and Employment (CLUE)
+      https://data.melbourne.vic.gov.au/explore/dataset/blocks-for-census-of-land-use-and-employment-clue/
+    - Small Areas for Census of Land Use and Employment (CLUE)
+      https://data.melbourne.vic.gov.au/explore/dataset/small-areas-for-census-of-land-use-and-employment-clue/
+    - Road corridors
+      https://data.melbourne.vic.gov.au/explore/dataset/road-corridors/
+    Changes: each tree given its share of the 2021 canopy outline its trunk stands in (or the nearest within 3 m),
+    split between council trees by nearness (a Voronoi split) within 15 m of each trunk, for Mature and Semi-mature
+    trees only; the useful life band turned into the year it ends by, counted from 2025; trees with no band marked
+    "Not assessed" (the portal's value column of 50 for them is a fill); the 603 blocks, the road corridor segments
+    holding a council tree and the 13 small areas taken into Plotlay whole and keyed by their own ids.
+
+  Base map in the Plotlay project and the app screenshots
+    © Commonwealth of Australia (Geoscience Australia), licensed under CC BY 4.0.
+
+NOT INCLUDED
+  Nothing in this repository is derived from OpenStreetMap. No imagery was traced, and no Google, Nearmap, Esri or
+  Mapbox imagery was used. Nothing here implies endorsement by the City of Melbourne.
+
+THIRD-PARTY SOFTWARE
+  The notebook uses pandas, GeoPandas, Shapely, pyproj and Matplotlib (installed from requirements.txt, each under its
+  own licence). Fonts in the visuals: IBM Plex Sans and IBM Plex Mono, SIL Open Font License 1.1.

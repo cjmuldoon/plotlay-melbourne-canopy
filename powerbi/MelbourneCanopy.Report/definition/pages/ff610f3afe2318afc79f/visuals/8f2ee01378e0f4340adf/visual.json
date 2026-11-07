@@ -1,0 +1,130 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "8f2ee01378e0f4340adf",
+  "position": {
+    "x": 980,
+    "y": 110,
+    "z": 1,
+    "height": 900,
+    "width": 900,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Blocks"
+                    }
+                  },
+                  "Property": "key"
+                }
+              },
+              "queryRef": "Blocks.key",
+              "nativeQueryRef": "key"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Blocks"
+                    }
+                  },
+                  "Property": "area_name"
+                }
+              },
+              "queryRef": "Blocks.area_name",
+              "nativeQueryRef": "area_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Blocks"
+                    }
+                  },
+                  "Property": "canopy_2025"
+                }
+              },
+              "queryRef": "Blocks.canopy_2025",
+              "nativeQueryRef": "canopy_2025"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Blocks"
+                    }
+                  },
+                  "Property": "lost_by_2045"
+                }
+              },
+              "queryRef": "Blocks.lost_by_2045",
+              "nativeQueryRef": "lost_by_2045"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Blocks"
+                    }
+                  },
+                  "Property": "pct_lost_by_2045"
+                }
+              },
+              "queryRef": "Blocks.pct_lost_by_2045",
+              "nativeQueryRef": "pct_lost_by_2045"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Blocks"
+                    }
+                  },
+                  "Property": "trees_ending_by_2045"
+                }
+              },
+              "queryRef": "Blocks.trees_ending_by_2045",
+              "nativeQueryRef": "trees_ending_by_2045"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Blocks'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

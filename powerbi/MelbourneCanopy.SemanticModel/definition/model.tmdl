@@ -1,0 +1,18 @@
+model Model
+	culture: en-AU
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-AU
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["DataFolder","GetFile","Blocks","BlockYears","Streets","Precincts","Trees","Years"]
+
+ref table Blocks
+ref table BlockYears
+ref table Streets
+ref table Precincts
+ref table Trees
+ref table Years
+
+ref cultureInfo en-AU

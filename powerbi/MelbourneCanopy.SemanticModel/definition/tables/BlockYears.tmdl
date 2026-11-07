@@ -1,0 +1,46 @@
+table BlockYears
+	lineageTag: a85c6097-8d1b-c128-ab01-f79accb9ca29
+
+	column key
+		dataType: string
+		isHidden
+		lineageTag: 6000ec9d-7b0b-1e03-95f0-162adcf772f3
+		summarizeBy: none
+		sourceColumn: key
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: 9c870992-baa9-79b0-bc30-1d23e0d6edf9
+		summarizeBy: none
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column canopy_m2
+		dataType: double
+		formatString: #,0
+		lineageTag: d6efc58b-8eb4-0f52-59b4-95e3d1736d36
+		summarizeBy: none
+		sourceColumn: canopy_m2
+
+		annotation SummarizationSetBy = Automatic
+
+	partition BlockYears = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(GetFile("geometry/blocks_wkt.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Kept = Table.SelectColumns(Promoted, {"key", "canopy_2025", "canopy_2035", "canopy_2045", "canopy_2055", "canopy_2065"}),
+				    Typed = Table.TransformColumnTypes(Kept, {{"key", type text}, {"canopy_2025", type number}, {"canopy_2035", type number}, {"canopy_2045", type number}, {"canopy_2055", type number}, {"canopy_2065", type number}}, "en-AU"),
+				    Long = Table.UnpivotOtherColumns(Typed, {"key"}, "col", "canopy_m2"),
+				    Yr = Table.AddColumn(Long, "year", each Number.FromText(Text.End([col], 4)), Int64.Type),
+				    Out = Table.SelectColumns(Yr, {"key", "year", "canopy_m2"})
+				in
+				    Out
+
+	annotation PBI_ResultType = Table

@@ -1,0 +1,59 @@
+table Precincts
+	lineageTag: fc99a572-f754-e717-c5ff-50d8827a72ae
+
+	column key
+		dataType: string
+		lineageTag: 48dc25b7-0a93-319b-8bd4-9142bb2e67a4
+		summarizeBy: none
+		sourceColumn: key
+
+		annotation SummarizationSetBy = Automatic
+
+	column canopy_2025
+		dataType: double
+		formatString: #,0
+		lineageTag: fa2577c8-7c61-ff8a-bd31-f651ef6ce891
+		summarizeBy: none
+		sourceColumn: canopy_2025
+
+		annotation SummarizationSetBy = Automatic
+
+	column lost_by_2045
+		dataType: double
+		formatString: #,0
+		lineageTag: fdedac1b-c579-2b80-eefb-6168e99aba01
+		summarizeBy: none
+		sourceColumn: lost_by_2045
+
+		annotation SummarizationSetBy = Automatic
+
+	column pct_lost_by_2045
+		dataType: double
+		formatString: 0.0
+		lineageTag: 25347181-e078-b66d-29ad-2cce2de43998
+		summarizeBy: none
+		sourceColumn: pct_lost_by_2045
+
+		annotation SummarizationSetBy = Automatic
+
+	column blocks
+		dataType: int64
+		formatString: 0
+		lineageTag: db78ca18-24a3-ac5e-bb8e-43ba11dddbb4
+		summarizeBy: none
+		sourceColumn: blocks
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Precincts = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(GetFile("geometry/precincts_wkt.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Kept = Table.SelectColumns(Promoted, {"key", "canopy_2025", "lost_by_2045", "pct_lost_by_2045", "blocks"}),
+				    Typed = Table.TransformColumnTypes(Kept, {{"key", type text}, {"canopy_2025", type number}, {"lost_by_2045", type number}, {"pct_lost_by_2045", type number}, {"blocks", Int64.Type}}, "en-AU")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

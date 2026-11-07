@@ -1,0 +1,102 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "559183998c26f563fbaa",
+  "position": {
+    "x": 980,
+    "y": 110,
+    "z": 1,
+    "height": 900,
+    "width": 900,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Streets"
+                    }
+                  },
+                  "Property": "seg_descr"
+                }
+              },
+              "queryRef": "Streets.seg_descr",
+              "nativeQueryRef": "seg_descr"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Streets"
+                    }
+                  },
+                  "Property": "canopy_2025"
+                }
+              },
+              "queryRef": "Streets.canopy_2025",
+              "nativeQueryRef": "canopy_2025"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Streets"
+                    }
+                  },
+                  "Property": "lost_by_2045"
+                }
+              },
+              "queryRef": "Streets.lost_by_2045",
+              "nativeQueryRef": "lost_by_2045"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Streets"
+                    }
+                  },
+                  "Property": "pct_lost_by_2045"
+                }
+              },
+              "queryRef": "Streets.pct_lost_by_2045",
+              "nativeQueryRef": "pct_lost_by_2045"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Segments'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

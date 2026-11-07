@@ -1,0 +1,180 @@
+table Blocks
+	lineageTag: 04c4f9f5-95c4-f21d-1de6-5eb07056c15a
+
+	/// Council-tree shade standing in the year picked (each tree gone by the top of its useful life band), in hectares
+	measure 'Shade ha' = DIVIDE ( SUM ( BlockYears[canopy_m2] ), 10000 )
+		formatString: #,0.0
+		lineageTag: be24edb5-a7e7-dd80-6b2b-06901ded3fe7
+
+	/// Shade in 2025, from the 2021 canopy outlines
+	measure 'Shade now ha' = DIVIDE ( SUM ( Blocks[canopy_2025] ), 10000 )
+		formatString: #,0.0
+		lineageTag: 86fd5df1-e55a-4e46-81ab-49bf3df342ad
+
+	/// Shade on trees whose useful life ends by 2045
+	measure 'Lost by 2045 ha' = DIVIDE ( SUM ( Blocks[lost_by_2045] ), 10000 )
+		formatString: #,0.0
+		lineageTag: 5018c6b7-7212-f83f-7d52-7a5489c14527
+
+	/// As the formula column pct_lost_by_2045 in Plotlay
+	measure 'Share lost by 2045' = DIVIDE ( SUM ( Blocks[lost_by_2045] ), SUM ( Blocks[canopy_2025] ) )
+		formatString: 0.0%
+		lineageTag: a6b4abf5-5007-46bd-5b6d-888edfe58425
+
+	/// Council-tree shade over the block area, for the year picked
+	measure 'Shade per m2 of block' = DIVIDE ( SUM ( BlockYears[canopy_m2] ), SUM ( Blocks[area_m2] ) )
+		formatString: 0.0%
+		lineageTag: 26c0f5a1-b19e-1539-bf07-c871a982c713
+
+	measure Trees = SUM ( Blocks[trees] )
+		formatString: #,0
+		lineageTag: 104d78ca-3662-a4e1-0461-e75c3ecd293f
+
+	measure 'Trees ending by 2045' = SUM ( Blocks[trees_ending_by_2045] )
+		formatString: #,0
+		lineageTag: 8266ade9-e4c0-98de-1c32-94287f529717
+
+	column key
+		dataType: string
+		lineageTag: 5fc97510-7967-55e5-6159-1edeb85a960a
+		summarizeBy: none
+		sourceColumn: key
+
+		annotation SummarizationSetBy = Automatic
+
+	column area_name
+		dataType: string
+		lineageTag: 806ecf96-4f62-deec-6793-ccdf08b5d3ad
+		summarizeBy: none
+		sourceColumn: area_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column region_name
+		dataType: string
+		lineageTag: 9932dda6-0460-1264-e8f9-0d84d820c363
+		summarizeBy: none
+		sourceColumn: region_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column area_m2
+		dataType: double
+		formatString: #,0
+		lineageTag: dcba5fe3-0892-074e-1233-760c6a3340fe
+		summarizeBy: none
+		sourceColumn: area_m2
+
+		annotation SummarizationSetBy = Automatic
+
+	column centroid_lat
+		dataType: double
+		lineageTag: e05eae0c-f8e1-08eb-0dba-72623924cf18
+		summarizeBy: none
+		sourceColumn: centroid_lat
+		dataCategory: Latitude
+
+		annotation SummarizationSetBy = Automatic
+
+	column centroid_lng
+		dataType: double
+		lineageTag: a197344d-f38d-42dc-6c7e-0f0add95e8d0
+		summarizeBy: none
+		sourceColumn: centroid_lng
+		dataCategory: Longitude
+
+		annotation SummarizationSetBy = Automatic
+
+	column canopy_2025
+		dataType: double
+		formatString: #,0
+		lineageTag: fc50ef5f-ce57-e11b-0a07-52a4f485484c
+		summarizeBy: none
+		sourceColumn: canopy_2025
+
+		annotation SummarizationSetBy = Automatic
+
+	column canopy_2035
+		dataType: double
+		formatString: #,0
+		lineageTag: 61bdc9d5-ab87-3138-3324-4a839602742b
+		summarizeBy: none
+		sourceColumn: canopy_2035
+
+		annotation SummarizationSetBy = Automatic
+
+	column canopy_2045
+		dataType: double
+		formatString: #,0
+		lineageTag: e58d4ab8-50e7-b3b1-dfc1-58a35b1516d5
+		summarizeBy: none
+		sourceColumn: canopy_2045
+
+		annotation SummarizationSetBy = Automatic
+
+	column canopy_2055
+		dataType: double
+		formatString: #,0
+		lineageTag: 707a394f-759e-c22d-f596-510b2940940c
+		summarizeBy: none
+		sourceColumn: canopy_2055
+
+		annotation SummarizationSetBy = Automatic
+
+	column canopy_2065
+		dataType: double
+		formatString: #,0
+		lineageTag: f78d9c3d-1bdd-1590-b8ee-a1b4f044b695
+		summarizeBy: none
+		sourceColumn: canopy_2065
+
+		annotation SummarizationSetBy = Automatic
+
+	column lost_by_2045
+		dataType: double
+		formatString: #,0
+		lineageTag: 9b420a16-e9b1-f904-4035-abdf25e39512
+		summarizeBy: none
+		sourceColumn: lost_by_2045
+
+		annotation SummarizationSetBy = Automatic
+
+	column pct_lost_by_2045
+		dataType: double
+		formatString: 0.0
+		lineageTag: e895d611-c11f-d29b-8de6-e614b8b9dfe4
+		summarizeBy: none
+		sourceColumn: pct_lost_by_2045
+
+		annotation SummarizationSetBy = Automatic
+
+	column trees
+		dataType: int64
+		formatString: #,0
+		lineageTag: db8851cd-42d0-52bb-2752-1055124a3854
+		summarizeBy: none
+		sourceColumn: trees
+
+		annotation SummarizationSetBy = Automatic
+
+	column trees_ending_by_2045
+		dataType: int64
+		formatString: #,0
+		lineageTag: 01e8a05a-69ef-bf94-eede-8610ad6ec502
+		summarizeBy: none
+		sourceColumn: trees_ending_by_2045
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Blocks = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(GetFile("geometry/blocks_wkt.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Kept = Table.SelectColumns(Promoted, {"key", "area_name", "region_name", "area_m2", "centroid_lat", "centroid_lng", "canopy_2025", "canopy_2035", "canopy_2045", "canopy_2055", "canopy_2065", "lost_by_2045", "pct_lost_by_2045", "trees", "trees_ending_by_2045"}),
+				    Typed = Table.TransformColumnTypes(Kept, {{"key", type text}, {"area_name", type text}, {"region_name", type text}, {"area_m2", type number}, {"centroid_lat", type number}, {"centroid_lng", type number}, {"canopy_2025", type number}, {"canopy_2035", type number}, {"canopy_2045", type number}, {"canopy_2055", type number}, {"canopy_2065", type number}, {"lost_by_2045", type number}, {"pct_lost_by_2045", type number}, {"trees", Int64.Type}, {"trees_ending_by_2045", Int64.Type}}, "en-AU")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

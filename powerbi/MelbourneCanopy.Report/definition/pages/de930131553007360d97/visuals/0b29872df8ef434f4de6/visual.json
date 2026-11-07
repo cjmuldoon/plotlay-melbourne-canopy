@@ -1,0 +1,78 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "0b29872df8ef434f4de6",
+  "position": {
+    "x": 980,
+    "y": 110,
+    "z": 1,
+    "height": 900,
+    "width": 900,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Trees"
+                    }
+                  },
+                  "Property": "ule_band"
+                }
+              },
+              "queryRef": "Trees.ule_band",
+              "nativeQueryRef": "ule_band"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Trees"
+                    }
+                  },
+                  "Property": "Tree shade ha"
+                }
+              },
+              "queryRef": "Trees.Tree shade ha",
+              "nativeQueryRef": "Tree shade ha"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Shade by useful life band, ha'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

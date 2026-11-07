@@ -1,0 +1,78 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "81f8364ad5746a66d39f",
+  "position": {
+    "x": 40,
+    "y": 110,
+    "z": 1,
+    "height": 900,
+    "width": 1180,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "shapeMap",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Blocks"
+                    }
+                  },
+                  "Property": "key"
+                }
+              },
+              "queryRef": "Blocks.key",
+              "nativeQueryRef": "key"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Blocks"
+                    }
+                  },
+                  "Property": "Shade per m2 of block"
+                }
+              },
+              "queryRef": "Blocks.Shade per m2 of block",
+              "nativeQueryRef": "Shade per m2 of block"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Shade per m² of block (custom map: data/geometry/blocks.topojson)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+table Years
+	lineageTag: e4a00407-f4e1-4849-a66f-076123f38494
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: e98df40a-db1f-a971-feee-c5350d6c58e6
+		summarizeBy: none
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Years = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromColumns({{2025, 2035, 2045, 2055, 2065}}, type table [year = Int64.Type])
+				in
+				    Source
+
+	annotation PBI_ResultType = Table

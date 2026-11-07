@@ -1,0 +1,114 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "b554cf6c68e4f128b513",
+  "position": {
+    "x": 40,
+    "y": 110,
+    "z": 1,
+    "height": 900,
+    "width": 1840,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "azureMap",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Trees"
+                    }
+                  },
+                  "Property": "com_id"
+                }
+              },
+              "queryRef": "Trees.com_id",
+              "nativeQueryRef": "com_id"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Trees"
+                    }
+                  },
+                  "Property": "lat"
+                }
+              },
+              "queryRef": "Trees.lat",
+              "nativeQueryRef": "lat"
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Trees"
+                    }
+                  },
+                  "Property": "lng"
+                }
+              },
+              "queryRef": "Trees.lng",
+              "nativeQueryRef": "lng"
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Trees"
+                    }
+                  },
+                  "Property": "ule_band"
+                }
+              },
+              "queryRef": "Trees.ule_band",
+              "nativeQueryRef": "ule_band"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Council trees by useful life band'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

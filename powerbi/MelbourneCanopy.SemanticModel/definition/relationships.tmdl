@@ -1,0 +1,7 @@
+relationship 6eef5b7a-1932-a254-77ca-8d054a645e3f
+	fromColumn: BlockYears.key
+	toColumn: Blocks.key
+
+relationship b292ce21-ae1e-c471-8a80-e46319c82e96
+	fromColumn: BlockYears.year
+	toColumn: Years.year
