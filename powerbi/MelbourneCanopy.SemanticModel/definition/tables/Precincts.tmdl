@@ -1,6 +1,11 @@
 table Precincts
 	lineageTag: fc99a572-f754-e717-c5ff-50d8827a72ae
 
+	/// Shade ending by 2045 over shade now, per precinct
+	measure 'Precinct share lost by 2045' = DIVIDE ( SUM ( Precincts[lost_by_2045] ), SUM ( Precincts[canopy_2025] ) )
+		formatString: 0.0%
+		lineageTag: cd5c960f-455f-701a-1596-0798b3b5f0ee
+
 	column key
 		dataType: string
 		lineageTag: 48dc25b7-0a93-319b-8bd4-9142bb2e67a4

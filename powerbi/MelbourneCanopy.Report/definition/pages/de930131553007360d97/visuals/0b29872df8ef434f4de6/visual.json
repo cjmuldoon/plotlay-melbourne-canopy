@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "Trees.ule_band",
-              "nativeQueryRef": "ule_band"
+              "nativeQueryRef": "ule_band",
+              "displayName": "Useful life left"
             }
           ]
         },
@@ -45,10 +46,29 @@
                 }
               },
               "queryRef": "Trees.Tree shade ha",
-              "nativeQueryRef": "Tree shade ha"
+              "nativeQueryRef": "Tree shade ha",
+              "displayName": "Shade (ha)"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Trees"
+                  }
+                },
+                "Property": "ule_band"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": false
       }
     },
     "drillFilterOtherVisuals": true,
@@ -66,7 +86,55 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Shade by useful life band, ha'"
+                  "Value": "'Shade by useful life left, ha'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

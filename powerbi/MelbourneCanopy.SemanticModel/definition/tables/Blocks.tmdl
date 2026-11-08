@@ -1,8 +1,15 @@
 table Blocks
 	lineageTag: 04c4f9f5-95c4-f21d-1de6-5eb07056c15a
 
-	/// Council-tree shade standing in the year picked (each tree gone by the top of its useful life band), in hectares
-	measure 'Shade ha' = DIVIDE ( SUM ( BlockYears[canopy_m2] ), 10000 )
+	/// The decade the shade measures use: the one picked, or 2025 when none is
+	measure 'Year shown' = SELECTEDVALUE ( Years[year], 2025 )
+		formatString: 0
+		lineageTag: 93e21a20-d489-807c-2c8b-48ad3e0c0168
+
+	/// Council-tree shade standing in the year shown (each tree gone by the top of its useful life band), in hectares
+	measure 'Shade ha' =
+			VAR y = [Year shown]
+			RETURN DIVIDE ( CALCULATE ( SUM ( BlockYears[canopy_m2] ), Years[year] = y ), 10000 )
 		formatString: #,0.0
 		lineageTag: be24edb5-a7e7-dd80-6b2b-06901ded3fe7
 
@@ -21,8 +28,10 @@ table Blocks
 		formatString: 0.0%
 		lineageTag: a6b4abf5-5007-46bd-5b6d-888edfe58425
 
-	/// Council-tree shade over the block area, for the year picked
-	measure 'Shade per m2 of block' = DIVIDE ( SUM ( BlockYears[canopy_m2] ), SUM ( Blocks[area_m2] ) )
+	/// Council-tree shade over the block area, in the year shown
+	measure 'Shade per m2 of block' =
+			VAR y = [Year shown]
+			RETURN DIVIDE ( CALCULATE ( SUM ( BlockYears[canopy_m2] ), Years[year] = y ), SUM ( Blocks[area_m2] ) )
 		formatString: 0.0%
 		lineageTag: 26c0f5a1-b19e-1539-bf07-c871a982c713
 

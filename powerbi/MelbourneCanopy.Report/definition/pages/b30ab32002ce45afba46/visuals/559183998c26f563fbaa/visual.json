@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "Streets.seg_descr",
-              "nativeQueryRef": "seg_descr"
+              "nativeQueryRef": "seg_descr",
+              "displayName": "Segment"
             },
             {
               "field": {
@@ -41,7 +42,8 @@
                 }
               },
               "queryRef": "Streets.canopy_2025",
-              "nativeQueryRef": "canopy_2025"
+              "nativeQueryRef": "canopy_2025",
+              "displayName": "Shade now (m²)"
             },
             {
               "field": {
@@ -55,7 +57,8 @@
                 }
               },
               "queryRef": "Streets.lost_by_2045",
-              "nativeQueryRef": "lost_by_2045"
+              "nativeQueryRef": "lost_by_2045",
+              "displayName": "Ending by 2045 (m²)"
             },
             {
               "field": {
@@ -69,10 +72,29 @@
                 }
               },
               "queryRef": "Streets.pct_lost_by_2045",
-              "nativeQueryRef": "pct_lost_by_2045"
+              "nativeQueryRef": "pct_lost_by_2045",
+              "displayName": "% ending by 2045"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Streets"
+                  }
+                },
+                "Property": "lost_by_2045"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": false
       }
     },
     "drillFilterOtherVisuals": true,
@@ -90,7 +112,100 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Segments'"
+                  "Value": "'Segments, most shade ending by 2045 first'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "580.8D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Streets.seg_descr"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "94.6D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Streets.canopy_2025"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "95.2D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Streets.lost_by_2045"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "95.3D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Streets.pct_lost_by_2045"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

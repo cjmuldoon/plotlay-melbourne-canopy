@@ -5,7 +5,7 @@
     "x": 1580,
     "y": 110,
     "z": 1,
-    "height": 140,
+    "height": 150,
     "width": 300,
     "tabOrder": 1
   },
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "Blocks.Share lost by 2045",
-              "nativeQueryRef": "Share lost by 2045"
+              "nativeQueryRef": "Share lost by 2045",
+              "displayName": "Share ending by 2045"
             }
           ]
         }
@@ -48,7 +49,29 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Share ending by 2045'"
+                  "Value": "'Share of 2025 shade ending by 2045'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

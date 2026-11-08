@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "Trees.com_id",
-              "nativeQueryRef": "com_id"
+              "nativeQueryRef": "com_id",
+              "displayName": "Tree"
             }
           ]
         },
@@ -35,17 +36,23 @@
           "projections": [
             {
               "field": {
-                "Column": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "Trees"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Trees"
+                        }
+                      },
+                      "Property": "lat"
                     }
                   },
-                  "Property": "lat"
+                  "Function": 1
                 }
               },
-              "queryRef": "Trees.lat",
-              "nativeQueryRef": "lat"
+              "queryRef": "Avg(Trees.lat)",
+              "nativeQueryRef": "lat",
+              "displayName": "Latitude"
             }
           ]
         },
@@ -53,17 +60,23 @@
           "projections": [
             {
               "field": {
-                "Column": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "Trees"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Trees"
+                        }
+                      },
+                      "Property": "lng"
                     }
                   },
-                  "Property": "lng"
+                  "Function": 1
                 }
               },
-              "queryRef": "Trees.lng",
-              "nativeQueryRef": "lng"
+              "queryRef": "Avg(Trees.lng)",
+              "nativeQueryRef": "lng",
+              "displayName": "Longitude"
             }
           ]
         },
@@ -81,7 +94,32 @@
                 }
               },
               "queryRef": "Trees.ule_band",
-              "nativeQueryRef": "ule_band"
+              "nativeQueryRef": "ule_band",
+              "displayName": "Useful life left"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Trees"
+                        }
+                      },
+                      "Property": "common_name"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(Trees.common_name)",
+              "nativeQueryRef": "common_name",
+              "displayName": "Species"
             }
           ]
         }
@@ -102,7 +140,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Council trees by useful life band'"
+                  "Value": "'Council trees by useful life left'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

@@ -77,6 +77,7 @@ table Trees
 
 	column ule_band
 		dataType: string
+		sortByColumn: band_order
 		lineageTag: a24e6185-8fcb-e08f-91c1-ad4770b9cbcd
 		summarizeBy: none
 		sourceColumn: ule_band
@@ -101,6 +102,15 @@ table Trees
 
 		annotation SummarizationSetBy = Automatic
 
+	column band_order
+		dataType: int64
+		formatString: 0
+		lineageTag: 05c59f23-5fcf-b1d2-cbf3-54596f8e000d
+		summarizeBy: none
+		sourceColumn: band_order
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Trees = m
 		mode: import
 		source =
@@ -108,8 +118,9 @@ table Trees
 				    Source = Csv.Document(GetFile("trees/trees.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
 				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
 				    Kept = Table.SelectColumns(Promoted, {"com_id", "lat", "lng", "common_name", "genus", "located_in", "precinct", "age_description", "ule_band", "end_by", "canopy_m2"}),
-				    Typed = Table.TransformColumnTypes(Kept, {{"com_id", type text}, {"lat", type number}, {"lng", type number}, {"common_name", type text}, {"genus", type text}, {"located_in", type text}, {"precinct", type text}, {"age_description", type text}, {"ule_band", type text}, {"end_by", Int64.Type}, {"canopy_m2", type number}}, "en-AU")
+				    Typed = Table.TransformColumnTypes(Kept, {{"com_id", type text}, {"lat", type number}, {"lng", type number}, {"common_name", type text}, {"genus", type text}, {"located_in", type text}, {"precinct", type text}, {"age_description", type text}, {"ule_band", type text}, {"end_by", Int64.Type}, {"canopy_m2", type number}}, "en-AU"),
+				    Ordered = Table.AddColumn(Typed, "band_order", each List.PositionOf({"< 10 years", "11 - 20 years", "21 - 30 years", "31 - 40 years", "> 41 years", "Not assessed"}, [ule_band]), Int64.Type)
 				in
-				    Typed
+				    Ordered
 
 	annotation PBI_ResultType = Table

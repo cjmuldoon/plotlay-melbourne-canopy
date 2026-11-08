@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "Precincts.key",
-              "nativeQueryRef": "key"
+              "nativeQueryRef": "key",
+              "displayName": "Precinct"
             }
           ]
         },
@@ -35,20 +36,39 @@
           "projections": [
             {
               "field": {
-                "Column": {
+                "Measure": {
                   "Expression": {
                     "SourceRef": {
                       "Entity": "Precincts"
                     }
                   },
-                  "Property": "pct_lost_by_2045"
+                  "Property": "Precinct share lost by 2045"
                 }
               },
-              "queryRef": "Precincts.pct_lost_by_2045",
-              "nativeQueryRef": "pct_lost_by_2045"
+              "queryRef": "Precincts.Precinct share lost by 2045",
+              "nativeQueryRef": "Precinct share lost by 2045",
+              "displayName": "Share ending by 2045"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Precincts"
+                  }
+                },
+                "Property": "Precinct share lost by 2045"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": false
       }
     },
     "drillFilterOtherVisuals": true,
@@ -66,7 +86,55 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'% of shade ending by 2045'"
+                  "Value": "'Share of shade ending by 2045, by precinct'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

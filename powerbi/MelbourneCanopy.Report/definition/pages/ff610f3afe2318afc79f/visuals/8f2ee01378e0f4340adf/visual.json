@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "Blocks.key",
-              "nativeQueryRef": "key"
+              "nativeQueryRef": "key",
+              "displayName": "Block"
             },
             {
               "field": {
@@ -41,7 +42,8 @@
                 }
               },
               "queryRef": "Blocks.area_name",
-              "nativeQueryRef": "area_name"
+              "nativeQueryRef": "area_name",
+              "displayName": "Area"
             },
             {
               "field": {
@@ -55,7 +57,8 @@
                 }
               },
               "queryRef": "Blocks.canopy_2025",
-              "nativeQueryRef": "canopy_2025"
+              "nativeQueryRef": "canopy_2025",
+              "displayName": "Shade now (m²)"
             },
             {
               "field": {
@@ -69,7 +72,8 @@
                 }
               },
               "queryRef": "Blocks.lost_by_2045",
-              "nativeQueryRef": "lost_by_2045"
+              "nativeQueryRef": "lost_by_2045",
+              "displayName": "Ending by 2045 (m²)"
             },
             {
               "field": {
@@ -83,7 +87,8 @@
                 }
               },
               "queryRef": "Blocks.pct_lost_by_2045",
-              "nativeQueryRef": "pct_lost_by_2045"
+              "nativeQueryRef": "pct_lost_by_2045",
+              "displayName": "% ending by 2045"
             },
             {
               "field": {
@@ -97,10 +102,29 @@
                 }
               },
               "queryRef": "Blocks.trees_ending_by_2045",
-              "nativeQueryRef": "trees_ending_by_2045"
+              "nativeQueryRef": "trees_ending_by_2045",
+              "displayName": "Trees ending by 2045"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Blocks"
+                  }
+                },
+                "Property": "lost_by_2045"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": false
       }
     },
     "drillFilterOtherVisuals": true,
@@ -118,7 +142,128 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Blocks'"
+                  "Value": "'Blocks, most shade ending by 2045 first'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "86.6D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Blocks.key"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "360.9D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Blocks.area_name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "113.0D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Blocks.canopy_2025"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "101.7D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Blocks.lost_by_2045"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "101.9D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Blocks.pct_lost_by_2045"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "101.9D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Blocks.trees_ending_by_2045"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

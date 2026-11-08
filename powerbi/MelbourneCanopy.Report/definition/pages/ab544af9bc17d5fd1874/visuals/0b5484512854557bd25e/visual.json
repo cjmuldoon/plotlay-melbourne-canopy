@@ -3,10 +3,10 @@
   "name": "0b5484512854557bd25e",
   "position": {
     "x": 40,
-    "y": 24,
+    "y": 18,
     "z": 0,
-    "height": 64,
-    "width": 1100,
+    "height": 86,
+    "width": 1500,
     "tabOrder": 0
   },
   "visual": {
@@ -31,7 +31,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Council-tree shade standing in each block, for the year picked. Each tree is gone by the top of its useful life band.",
+                    "value": "Council-tree shade standing in each block, for the year picked (2025 when none is). Each tree is gone by the top of its useful life band.",
                     "textStyle": {
                       "fontSize": "11pt",
                       "color": "#5b6573"
