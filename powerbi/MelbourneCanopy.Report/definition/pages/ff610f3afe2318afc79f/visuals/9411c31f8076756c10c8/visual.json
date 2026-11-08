@@ -22,7 +22,8 @@
                     "value": "Trees, 2021 tree canopies, CLUE blocks and road corridors: City of Melbourne Open Data, CC BY 4.0. Blocks and streets keyed in Plotlay (getplotlay.com). Map context: ABS ASGS 2021 and Vicmap Hydro (CC BY 4.0). Each tree gone by the top of its useful life band, counted from 2025; not assessed trees counted as standing; replacements not counted.",
                     "textStyle": {
                       "fontSize": "9pt",
-                      "color": "#5b6573"
+                      "color": "#5b6573",
+                      "fontFamily": "Segoe UI"
                     }
                   }
                 ]
