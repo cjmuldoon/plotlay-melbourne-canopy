@@ -53,7 +53,7 @@ The council publishes each tree as a point with its band, and its canopy as outl
 | [`data/trees/`](data/trees) | `trees.csv` (every council tree, its band, `end_by` and `canopy_m2`) and `canopy_by_year.csv` (the slider's table) |
 | [`python/`](python) | A narrated notebook that recomputes every number here: [`where_the_canopy_runs_out.ipynb`](python/where_the_canopy_runs_out.ipynb) |
 | [`powerbi/`](powerbi) | A Power BI Project (`.pbip`). Start with [`powerbi/OPEN-ME.md`](powerbi/OPEN-ME.md) |
-| [`visuals/`](visuals) | The maps, charts and animation |
+| [`visuals/`](visuals) | The maps, charts and animation; the charts made in Plotlay from the layers and tables here |
 
 ### Run the notebook
 
