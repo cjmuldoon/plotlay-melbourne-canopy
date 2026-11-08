@@ -54,7 +54,7 @@ Use **Home, Publish**. In the Power BI service, set the semantic model's **Data 
 
 ## Shot list for the website and the video
 
-Capture at 1920 × 1080 (Windows display scaling 100%), with the Plotlay theme. Save them to `powerbi/screenshots/`.
+Capture at 1920 × 1080 (Windows display scaling 100%), with the Plotlay theme. Save them to `powerbi/Screenshots/`.
 
 | # | Shot | How | Length |
 |---|---|---|---|
