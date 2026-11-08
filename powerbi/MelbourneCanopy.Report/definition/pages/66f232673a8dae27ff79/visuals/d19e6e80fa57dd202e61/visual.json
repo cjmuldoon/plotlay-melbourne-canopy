@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "EVERY COUNCIL TREE",
+                    "value": "THE TREES THAT GO FIRST",
                     "textStyle": {
                       "fontSize": "24pt",
                       "color": "#163c6e",
@@ -31,7 +31,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Azure Maps: each tree, coloured by its useful life band. Add data/geometry/blocks.geojson as a reference layer (Format visual, Reference layer) for the block outlines.",
+                    "value": "Azure Maps on a light grey street map: each council tree whose useful life ends by 2045, coloured by its band. Add data/geometry/blocks.geojson as a reference layer (Format visual, Reference layer) for the block outlines.",
                     "textStyle": {
                       "fontSize": "11pt",
                       "color": "#5b6573"

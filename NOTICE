@@ -36,6 +36,12 @@ UPSTREAM SOURCES
   Base map in the Plotlay project and the app screenshots
     © Commonwealth of Australia (Geoscience Australia), licensed under CC BY 4.0.
 
+POWER BI MAP CONTEXT
+  The Shape Map in powerbi/ draws suburb and locality boundaries round the blocks: Australian Bureau of Statistics,
+  ASGS Edition 3, Suburbs and Localities 2021 and Mesh Blocks 2021 (water), CC BY 4.0; with the river, harbour and bay
+  cut out of them from Vicmap Hydro water areas, State of Victoria (Department of Transport and Planning), CC BY 4.0.
+  All generalised and cut to the map frame. Water itself is the map background showing where no land is drawn.
+
 NOT INCLUDED
   Nothing in this repository is derived from OpenStreetMap. No imagery was traced, and no Google, Nearmap, Esri or
   Mapbox imagery was used. Nothing here implies endorsement by the City of Melbourne.
