@@ -79,18 +79,18 @@ table Blocks
 	column centroid_lat
 		dataType: double
 		lineageTag: e05eae0c-f8e1-08eb-0dba-72623924cf18
+		dataCategory: Latitude
 		summarizeBy: none
 		sourceColumn: centroid_lat
-		dataCategory: Latitude
 
 		annotation SummarizationSetBy = Automatic
 
 	column centroid_lng
 		dataType: double
 		lineageTag: a197344d-f38d-42dc-6c7e-0f0add95e8d0
+		dataCategory: Longitude
 		summarizeBy: none
 		sourceColumn: centroid_lng
-		dataCategory: Longitude
 
 		annotation SummarizationSetBy = Automatic
 
@@ -187,3 +187,4 @@ table Blocks
 				    Typed
 
 	annotation PBI_ResultType = Table
+

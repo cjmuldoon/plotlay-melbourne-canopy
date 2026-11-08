@@ -1,1 +1,494 @@
 cultureInfo en-AU
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "years.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Years",
+			          "ConceptualProperty": "year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Year": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "blocks.shade_ha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Blocks",
+			          "ConceptualProperty": "Shade ha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Shade standing (ha)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "blocks.key": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Blocks",
+			          "ConceptualProperty": "key"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Block": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "blocks.shade_per_m2_of_block": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Blocks",
+			          "ConceptualProperty": "Shade per m2 of block"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Shade per m² of block": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "blocks.share_lost_by_2045": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Blocks",
+			          "ConceptualProperty": "Share lost by 2045"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Share ending by 2045": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "blocks.area_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Blocks",
+			          "ConceptualProperty": "area_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Area": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "blocks.canopy_2025": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Blocks",
+			          "ConceptualProperty": "canopy_2025"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Shade now (m²)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "blocks.lost_by_2045": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Blocks",
+			          "ConceptualProperty": "lost_by_2045"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Ending by 2045 (m²)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "blocks.pct_lost_by_2045": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Blocks",
+			          "ConceptualProperty": "pct_lost_by_2045"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% ending by 2045": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "blocks.trees_ending_by_2045": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Blocks",
+			          "ConceptualProperty": "trees_ending_by_2045"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Trees ending by 2045": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "blocks.lost_by_2045_ha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Blocks",
+			          "ConceptualProperty": "Lost by 2045 ha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Shade ending by 2045 (ha)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "streets.seg_descr": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Streets",
+			          "ConceptualProperty": "seg_descr"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Segment": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "streets.canopy_2025": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Streets",
+			          "ConceptualProperty": "canopy_2025"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Shade now (m²)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "streets.lost_by_2045": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Streets",
+			          "ConceptualProperty": "lost_by_2045"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Ending by 2045 (m²)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "streets.pct_lost_by_2045": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Streets",
+			          "ConceptualProperty": "pct_lost_by_2045"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% ending by 2045": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "streets.street": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Streets",
+			          "ConceptualProperty": "street"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Street": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "streets.street_lost_by_2045_m2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Streets",
+			          "ConceptualProperty": "Street lost by 2045 m2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Shade ending by 2045 (m²)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "trees.ule_band": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Trees",
+			          "ConceptualProperty": "ule_band"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Useful life left": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "trees.tree_shade_ha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Trees",
+			          "ConceptualProperty": "Tree shade ha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Shade (ha)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "trees.common_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Trees",
+			          "ConceptualProperty": "common_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Species": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "trees.com_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Trees",
+			          "ConceptualProperty": "com_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Tree": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "precincts.key": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Precincts",
+			          "ConceptualProperty": "key"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Precinct": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "precincts.precinct_share_lost_by_2045": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Precincts",
+			          "ConceptualProperty": "Precinct share lost by 2045"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Share ending by 2045": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

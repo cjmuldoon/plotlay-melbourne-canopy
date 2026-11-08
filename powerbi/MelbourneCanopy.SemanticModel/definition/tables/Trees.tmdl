@@ -20,18 +20,18 @@ table Trees
 	column lat
 		dataType: double
 		lineageTag: 2c315d82-253c-5f96-adf5-cdf8ca7733d2
+		dataCategory: Latitude
 		summarizeBy: none
 		sourceColumn: lat
-		dataCategory: Latitude
 
 		annotation SummarizationSetBy = Automatic
 
 	column lng
 		dataType: double
 		lineageTag: 2174b604-3308-f23e-c801-13a2ab4a380f
+		dataCategory: Longitude
 		summarizeBy: none
 		sourceColumn: lng
-		dataCategory: Longitude
 
 		annotation SummarizationSetBy = Automatic
 
@@ -77,10 +77,10 @@ table Trees
 
 	column ule_band
 		dataType: string
-		sortByColumn: band_order
 		lineageTag: a24e6185-8fcb-e08f-91c1-ad4770b9cbcd
 		summarizeBy: none
 		sourceColumn: ule_band
+		sortByColumn: band_order
 
 		annotation SummarizationSetBy = Automatic
 
@@ -124,3 +124,4 @@ table Trees
 				    Ordered
 
 	annotation PBI_ResultType = Table
+

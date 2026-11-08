@@ -40,18 +40,18 @@ table Streets
 	column centroid_lat
 		dataType: double
 		lineageTag: c062b28c-590c-5265-fbf5-26761eb8fbfd
+		dataCategory: Latitude
 		summarizeBy: none
 		sourceColumn: centroid_lat
-		dataCategory: Latitude
 
 		annotation SummarizationSetBy = Automatic
 
 	column centroid_lng
 		dataType: double
 		lineageTag: 58ea5d26-54ba-3e3c-3187-6b9dd86100a0
+		dataCategory: Longitude
 		summarizeBy: none
 		sourceColumn: centroid_lng
-		dataCategory: Longitude
 
 		annotation SummarizationSetBy = Automatic
 
@@ -139,3 +139,4 @@ table Streets
 				    Named
 
 	annotation PBI_ResultType = Table
+

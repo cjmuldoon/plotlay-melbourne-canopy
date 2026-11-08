@@ -7,7 +7,10 @@ model Model
 		returnErrorValuesAsNull
 
 annotation PBI_QueryOrder = ["DataFolder","GetFile","Blocks","BlockYears","Streets","Precincts","Trees","Years"]
+
 annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_ProTooling = ["DevMode"]
 
 ref table Blocks
 ref table BlockYears
@@ -17,3 +20,4 @@ ref table Trees
 ref table Years
 
 ref cultureInfo en-AU
+
