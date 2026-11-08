@@ -35,9 +35,9 @@ table Blocks
 		formatString: 0.0%
 		lineageTag: 26c0f5a1-b19e-1539-bf07-c871a982c713
 
-	measure Trees = SUM ( Blocks[trees] )
+	measure 'Trees in the blocks' = SUM ( Blocks[trees] )
 		formatString: #,0
-		lineageTag: 104d78ca-3662-a4e1-0461-e75c3ecd293f
+		lineageTag: 333f960e-00a4-b942-317d-8a6ee0ec9bb8
 
 	measure 'Trees ending by 2045' = SUM ( Blocks[trees_ending_by_2045] )
 		formatString: #,0

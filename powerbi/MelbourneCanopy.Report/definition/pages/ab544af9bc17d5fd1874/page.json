@@ -4,5 +4,12 @@
   "displayName": "Shade by decade",
   "displayOption": "FitToPage",
   "height": 1080,
-  "width": 1920
+  "width": 1920,
+  "visualInteractions": [
+    {
+      "source": "0626baa2cf891dfb8bbd",
+      "target": "07ebc386cfafa13d2cde",
+      "type": "NoFilter"
+    }
+  ]
 }

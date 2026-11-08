@@ -37,7 +37,7 @@ Pick the other decades and the shade card reads 271.9 (2035), 251.6 (2045), 116.
 - **BlockYears**: the blocks' `canopy_2025` to `canopy_2065` unpivoted in Power Query to one row per block and year.
 - **Years** (2025 to 2065): for the year slicer. The shade measures always use one decade: the one picked, or 2025 when none is.
 - **Streets** (`streets_wkt.csv`, with a `street` name made in Power Query), **Precincts** (`precincts_wkt.csv`) and **Trees** (`data/trees/trees.csv`).
-- Measures: `Shade ha`, `Shade now ha`, `Lost by 2045 ha`, `Share lost by 2045`, `Shade per m2 of block`, `Trees`, `Trees ending by 2045`, and on Streets and Trees their own totals.
+- Measures: `Shade ha`, `Shade now ha`, `Lost by 2045 ha`, `Share lost by 2045`, `Shade per m2 of block`, `Trees in the blocks`, `Trees ending by 2045`, and on Streets and Trees their own totals.
 
 ## The two maps
 
