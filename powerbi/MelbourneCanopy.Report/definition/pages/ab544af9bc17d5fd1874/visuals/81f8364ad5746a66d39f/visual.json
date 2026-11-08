@@ -107,7 +107,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Shade per m² of block, year picked (darker: more shade)'"
+                  "Value": "'Shade per m² of block, year picked'"
                 }
               }
             },
@@ -299,7 +299,7 @@
   "annotations": [
     {
       "name": "plotlay.legend",
-      "value": "[[\"#6b1a10\", \"darker: more\"], [\"#f8dcc6\", \"paler: less\"]]"
+      "value": "[[\"#6b1a10\", \"darker: more shade\"], [\"#f8dcc6\", \"paler: less shade\"]]"
     }
   ]
 }
