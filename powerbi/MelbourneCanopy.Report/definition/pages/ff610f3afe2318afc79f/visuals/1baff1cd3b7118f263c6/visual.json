@@ -3,9 +3,9 @@
   "name": "1baff1cd3b7118f263c6",
   "position": {
     "x": 40,
-    "y": 110,
+    "y": 133,
     "z": 1,
-    "height": 900,
+    "height": 877,
     "width": 900,
     "tabOrder": 1
   },
@@ -23,11 +23,11 @@
                       "Entity": "Blocks"
                     }
                   },
-                  "Property": "key"
+                  "Property": "block_label"
                 }
               },
-              "queryRef": "Blocks.key",
-              "nativeQueryRef": "key",
+              "queryRef": "Blocks.block_label",
+              "nativeQueryRef": "block_label",
               "displayName": "Block",
               "active": true
             }
@@ -118,6 +118,13 @@
                   "Value": "true"
                 }
               }
+            },
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Categorical'"
+                }
+              }
             }
           }
         }
@@ -161,7 +168,7 @@
                 "Entity": "Blocks"
               }
             },
-            "Property": "key"
+            "Property": "block_label"
           }
         },
         "type": "TopN",
@@ -189,7 +196,7 @@
                               "Source": "s"
                             }
                           },
-                          "Property": "key"
+                          "Property": "block_label"
                         },
                         "Name": "field"
                       }
@@ -233,7 +240,7 @@
                             "Source": "s"
                           }
                         },
-                        "Property": "key"
+                        "Property": "block_label"
                       }
                     }
                   ],
@@ -249,5 +256,11 @@
         }
       }
     ]
-  }
+  },
+  "annotations": [
+    {
+      "name": "plotlay.categoryLabels",
+      "value": "[\"1 CBD West\", \"1001 West Melbourne (Industrial)\", \"1004 West Melbourne (Industrial)\", \"1005 West Melbourne (Industrial)\", \"1006 West Melbourne (Industrial)\", \"1007 West Melbourne (Industrial)\", \"1009 West Melbourne (Industrial)\", \"101 West Melbourne (Residential)\", \"1012 North Melbourne\", \"1013 West Melbourne (Industrial)\", \"1014 West Melbourne (Industrial)\", \"1015 West Melbourne (Industrial)\", \"1016 Kensington\", \"103 CBD West\", \"104 CBD East\", \"105 CBD East\", \"107 CBD East\", \"11 CBD West\", \"1101 Docklands\", \"1102 Docklands\", \"1103 Docklands\", \"1104 Docklands\", \"1105 Docklands\", \"1106 Docklands\", \"1107 Docklands\", \"1108 Docklands\", \"1109 Docklands\", \"111 West Melbourne (Residential)\", \"1110 Docklands\", \"1111 West Melbourne (Industrial)\", \"1112 Docklands\", \"113 CBD West\", \"114 CBD East\", \"115 CBD East\", \"116 CBD East\", \"12 CBD West\", \"125 CBD East\", \"13 CBD West\", \"131 Docklands\", \"14 CBD Retail Core\", \"15 CBD Retail Core\", \"16 CBD Retail Core\", \"17 CBD East\", \"18 CBD East\", \"2 CBD West\", \"201 Carlton\", \"202 Carlton\", \"203 Carlton\", \"204 Carlton\", \"205 Carlton\", \"206 Carlton\", \"207 Carlton\", \"208 Carlton\", \"209 Carlton\", \"21 CBD West\", \"210 Carlton\", \"211 Carlton\", \"212 Carlton\", \"213 Carlton\", \"214 Carlton\", \"215 Carlton\", \"216 Carlton\", \"217 Carlton\", \"218 Carlton\", \"219 Carlton\", \"22 CBD West\", \"220 Carlton\", \"221 Carlton\", \"222 Carlton\", \"223 Carlton\", \"224 Carlton\", \"225 Carlton\", \"226 Carlton\", \"227 Carlton\", \"228 Carlton\", \"229 Carlton\", \"23 CBD West\", \"230 Carlton\", \"231 Carlton\", \"232 Carlton\", \"233 Carlton\", \"234 Carlton\", \"235 Carlton\", \"236 Carlton\", \"237 Carlton\", \"238 Carlton\", \"2381 North Melbourne\", \"2382 North Melbourne\", \"2383 North Melbourne\", \"2384 North Melbourne\", \"2385 North Melbourne\", \"2386 North Melbourne\", \"2387 North Melbourne\", \"2388 North Melbourne\", \"2389 North Melbourne\", \"239 Carlton\", \"2390 North Melbourne\", \"2391 North Melbourne\", \"2392 North Melbourne\", \"24 CBD Retail Core\", \"240 Carlton\", \"241 Carlton\", \"242 Carlton\", \"243 Carlton\", \"244 Carlton\", \"245 Carlton\", \"246 Carlton\", \"247 Carlton\", \"248 Carlton\", \"249 Carlton\", \"25 CBD Retail Core\", \"250 Carlton\", \"2501 Kensington\", \"2502 Kensington\", \"2503 Kensington\", \"2504 Kensington\", \"2505 Kensington\", \"2506 Kensington\", \"2507 Kensington\", \"2508 Kensington\", \"2509 Kensington\", \"251 Carlton\", \"2510 Kensington\", \"2511 Kensington\", \"2512 Kensington\", \"2513 Kensington\", \"2514 Kensington\", \"2515 Kensington\", \"2516 Kensington\", \"2517 Kensington\", \"2518 Kensington\", \"2519 Kensington\", \"252 Carlton\", \"2520 Kensington\", \"2521 Kensington\", \"2522 Kensington\", \"2523 Kensington\", \"2524 Kensington\", \"2525 Kensington\", \"2526 Kensington\", \"2527 Kensington\", \"2528 Kensington\", \"2529 Kensington\", \"253 Carlton\", \"2530 Kensington\", \"2531 Kensington\", \"2532 Kensington\", \"2533 Kensington\", \"2534 Kensington\", \"2535 Kensington\", \"2536 Kensington\", \"2537 Kensington\", \"2538 Kensington\", \"2539 Kensington\", \"254 Carlton\", \"2540 Kensington\", \"2541 Kensington\", \"2542 Kensington\", \"2543 Kensington\", \"2544 Kensington\", \"2545 Kensington\", \"2546 Kensington\", \"2547 Kensington\", \"2548 Kensington\", \"255 Carlton\", \"256 Carlton\", \"257 Carlton\", \"258 Carlton\", \"259 Carlton\", \"26 CBD Retail Core\", \"260 Carlton\", \"261 Carlton\", \"262 Carlton\", \"263 Carlton\", \"264 Carlton\", \"265 Carlton\", \"266 Carlton\", \"267 Carlton\", \"268 Carlton\", \"269 Carlton\", \"27 CBD East\", \"270 Parkville\", \"271 Parkville\", \"272 Parkville\", \"273 Carlton\", \"274 Carlton\", \"28 CBD East\", \"301 North Melbourne\", \"302 North Melbourne\", \"303 North Melbourne\", \"304 North Melbourne\", \"305 North Melbourne\", \"306 North Melbourne\", \"307 North Melbourne\", \"308 North Melbourne\", \"309 North Melbourne\", \"31 CBD West\", \"310 North Melbourne\", \"311 North Melbourne\", \"312 North Melbourne\", \"313 North Melbourne\", \"314 North Melbourne\", \"315 North Melbourne\", \"316 North Melbourne\", \"317 North Melbourne\", \"318 North Melbourne\", \"319 North Melbourne\", \"32 CBD West\", \"320 North Melbourne\", \"321 North Melbourne\", \"322 North Melbourne\", \"323 North Melbourne\", \"324 North Melbourne\", \"325 North Melbourne\", \"326 North Melbourne\", \"327 North Melbourne\", \"328 North Melbourne\", \"329 North Melbourne\", \"33 CBD West\", \"330 North Melbourne\", \"331 North Melbourne\", \"332 North Melbourne\", \"333 North Melbourne\", \"334 North Melbourne\", \"335 North Melbourne\", \"336 North Melbourne\", \"337 North Melbourne\", \"338 North Melbourne\", \"339 North Melbourne\", \"34 CBD Retail Core\", \"340 North Melbourne\", \"341 North Melbourne\", \"342 North Melbourne\", \"343 North Melbourne\", \"344 North Melbourne\", \"345 North Melbourne\", \"346 North Melbourne\", \"347 North Melbourne\", \"348 North Melbourne\", \"349 North Melbourne\", \"35 CBD Retail Core\", \"350 North Melbourne\", \"351 North Melbourne\", \"352 North Melbourne\", \"353 North Melbourne\", \"354 North Melbourne\", \"355 North Melbourne\", \"356 North Melbourne\", \"357 North Melbourne\", \"358 North Melbourne\", \"359 North Melbourne\", \"36 CBD Retail Core\", \"360 North Melbourne\", \"361 North Melbourne\", \"362 North Melbourne\", \"363 North Melbourne\", \"364 North Melbourne\", \"365 North Melbourne\", \"366 North Melbourne\", \"367 North Melbourne\", \"368 North Melbourne\", \"369 North Melbourne\", \"37 CBD East\", \"370 North Melbourne\", \"371 North Melbourne\", \"372 North Melbourne\", \"373 North Melbourne\", \"374 North Melbourne\", \"375 North Melbourne\", \"376 North Melbourne\", \"377 North Melbourne\", \"378 North Melbourne\", \"379 North Melbourne\", \"38 CBD East\", \"380 North Melbourne\", \"4 CBD Retail Core\", \"401 West Melbourne (Residential)\", \"402 West Melbourne (Residential)\", \"403 West Melbourne (Residential)\", \"404 West Melbourne (Residential)\", \"405 West Melbourne (Residential)\", \"406 West Melbourne (Residential)\", \"407 West Melbourne (Residential)\", \"408 West Melbourne (Residential)\", \"409 West Melbourne (Residential)\", \"41 CBD West\", \"410 West Melbourne (Residential)\", \"411 West Melbourne (Residential)\", \"412 West Melbourne (Residential)\", \"413 West Melbourne (Residential)\", \"414 West Melbourne (Residential)\", \"415 West Melbourne (Residential)\", \"416 West Melbourne (Residential)\", \"418 West Melbourne (Residential)\", \"419 West Melbourne (Residential)\", \"42 CBD West\", \"420 West Melbourne (Residential)\", \"421 West Melbourne (Residential)\", \"422 West Melbourne (Residential)\", \"423 West Melbourne (Residential)\", \"424 West Melbourne (Residential)\", \"425 West Melbourne (Residential)\", \"426 West Melbourne (Residential)\", \"427 West Melbourne (Residential)\", \"428 West Melbourne (Residential)\", \"429 West Melbourne (Residential)\", \"43 CBD West\", \"430 West Melbourne (Residential)\", \"431 West Melbourne (Residential)\", \"432 West Melbourne (Residential)\", \"433 West Melbourne (Residential)\", \"434 West Melbourne (Residential)\", \"435 West Melbourne (Residential)\", \"436 West Melbourne (Residential)\", \"437 West Melbourne (Residential)\", \"438 West Melbourne (Residential)\", \"439 West Melbourne (Residential)\", \"44 CBD Retail Core\", \"440 West Melbourne (Residential)\", \"441 West Melbourne (Residential)\", \"442 West Melbourne (Residential)\", \"443 West Melbourne (Residential)\", \"444 West Melbourne (Residential)\", \"445 West Melbourne (Residential)\", \"45 CBD Retail Core\", \"46 CBD Retail Core\", \"47 CBD East\", \"48 CBD East\", \"5 CBD Retail Core\", \"501 West Melbourne (Industrial)\", \"502 West Melbourne (Industrial)\", \"503 Kensington\", \"504 Kensington\", \"505 Kensington\", \"506 North Melbourne\", \"507 Kensington\", \"508 Kensington\", \"509 Kensington\", \"51 CBD West\", \"510 Kensington\", \"511 Kensington\", \"512 Kensington\", \"513 Kensington\", \"514 Kensington\", \"515 Kensington\", \"516 Kensington\", \"517 Kensington\", \"518 Kensington\", \"519 Kensington\", \"52 CBD West\", \"520 Kensington\", \"521 Kensington\", \"522 Kensington\", \"523 Kensington\", \"524 Kensington\", \"525 Kensington\", \"526 Kensington\", \"527 Kensington\", \"528 Kensington\", \"529 Kensington\", \"53 CBD West\", \"530 Kensington\", \"531 Kensington\", \"532 Kensington\", \"533 Kensington\", \"534 Kensington\", \"535 Kensington\", \"536 Kensington\", \"537 Kensington\", \"538 Kensington\", \"539 Kensington\", \"54 CBD Retail Core\", \"540 Kensington\", \"541 Kensington\", \"542 Kensington\", \"543 Kensington\", \"544 Kensington\", \"545 Kensington\", \"546 Kensington\", \"547 Kensington\", \"548 Kensington\", \"549 Kensington\", \"55 CBD Retail Core\", \"550 Kensington\", \"551 Kensington\", \"552 Kensington\", \"553 Kensington\", \"554 Kensington\", \"555 Kensington\", \"556 Kensington\", \"557 Kensington\", \"558 Kensington\", \"559 Kensington\", \"56 CBD Retail Core\", \"560 Kensington\", \"561 Kensington\", \"562 Kensington\", \"563 Kensington\", \"564 Kensington\", \"565 Kensington\", \"566 Kensington\", \"567 Kensington\", \"568 Kensington\", \"569 Kensington\", \"57 CBD East\", \"570 Kensington\", \"571 Kensington\", \"58 CBD East\", \"6 CBD Retail Core\", \"601 East Melbourne\", \"602 East Melbourne\", \"603 East Melbourne\", \"604 East Melbourne\", \"605 East Melbourne\", \"606 East Melbourne\", \"607 East Melbourne\", \"608 East Melbourne\", \"609 East Melbourne\", \"61 CBD West\", \"610 East Melbourne\", \"611 East Melbourne\", \"612 East Melbourne\", \"613 East Melbourne\", \"614 East Melbourne\", \"615 East Melbourne\", \"616 East Melbourne\", \"617 East Melbourne\", \"618 East Melbourne\", \"619 East Melbourne\", \"62 CBD West\", \"620 East Melbourne\", \"621 East Melbourne\", \"63 CBD West\", \"64 CBD Retail Core\", \"642 East Melbourne\", \"643 East Melbourne\", \"644 East Melbourne\", \"645 East Melbourne\", \"646 East Melbourne\", \"649 East Melbourne\", \"65 CBD Retail Core\", \"650 East Melbourne\", \"651 East Melbourne\", \"652 East Melbourne\", \"653 East Melbourne\", \"654 Melbourne (Remainder)\", \"655 East Melbourne\", \"656 East Melbourne\", \"657 East Melbourne\", \"658 East Melbourne\", \"659 Melbourne (Remainder)\", \"66 CBD Retail Core\", \"660 Melbourne (Remainder)\", \"661 East Melbourne\", \"662 East Melbourne\", \"663 Melbourne (Remainder)\", \"67 CBD East\", \"68 CBD East\", \"71 CBD West\", \"710 Melbourne (Remainder)\", \"72 CBD West\", \"720 Melbourne (Remainder)\", \"724 Melbourne (Remainder)\", \"728 Southbank\", \"729 Southbank\", \"73 CBD West\", \"730 Southbank\", \"731 Southbank\", \"732 Southbank\", \"733 Southbank\", \"734 Southbank\", \"735 Southbank\", \"736 Southbank\", \"737 Southbank\", \"738 Southbank\", \"739 Southbank\", \"74 CBD Retail Core\", \"740 Southbank\", \"741 Southbank\", \"742 Southbank\", \"743 Southbank\", \"744 Southbank\", \"745 Southbank\", \"746 Southbank\", \"747 Southbank\", \"748 Southbank\", \"749 Southbank\", \"750 Southbank\", \"751 Southbank\", \"752 Southbank\", \"753 Southbank\", \"759 Melbourne (Remainder)\", \"76 CBD Retail Core\", \"760 Melbourne (Remainder)\", \"77 CBD East\", \"771 Docklands\", \"772 Docklands\", \"773 Docklands\", \"774 Port Melbourne\", \"775 Port Melbourne\", \"776 Docklands\", \"777 Port Melbourne\", \"778 Port Melbourne\", \"779 Port Melbourne\", \"78 CBD East\", \"780 Port Melbourne\", \"781 Port Melbourne\", \"782 Port Melbourne\", \"783 Docklands\", \"784 Port Melbourne\", \"785 Port Melbourne\", \"786 Port Melbourne\", \"787 Port Melbourne\", \"788 Port Melbourne\", \"789 Port Melbourne\", \"790 Port Melbourne\", \"791 Port Melbourne\", \"792 Port Melbourne\", \"795 Port Melbourne\", \"801 Southbank\", \"802 Southbank\", \"803 Southbank\", \"804 Southbank\", \"806 Southbank\", \"807 Southbank\", \"808 Southbank\", \"809 Southbank\", \"81 CBD West\", \"810 Southbank\", \"811 Southbank\", \"812 Southbank\", \"813 Southbank\", \"814 Southbank\", \"815 Southbank\", \"82 CBD West\", \"83 CBD West\", \"84 CBD Retail Core\", \"849 South Yarra\", \"85 CBD Retail Core\", \"850 Melbourne (Remainder)\", \"851 Melbourne (Remainder)\", \"852 Melbourne (Remainder)\", \"853 South Yarra\", \"854 South Yarra\", \"855 South Yarra\", \"856 South Yarra\", \"857 South Yarra\", \"858 South Yarra\", \"859 South Yarra\", \"86 CBD Retail Core\", \"860 South Yarra\", \"861 South Yarra\", \"862 South Yarra\", \"863 Melbourne (Remainder)\", \"864 South Yarra\", \"865 South Yarra\", \"866 South Yarra\", \"867 South Yarra\", \"868 South Yarra\", \"869 South Yarra\", \"87 CBD East\", \"870 Melbourne (Remainder)\", \"871 Melbourne (Remainder)\", \"88 CBD East\", \"901 Parkville\", \"902 Parkville\", \"903 Parkville\", \"904 Parkville\", \"905 Parkville\", \"906 Parkville\", \"907 Parkville\", \"908 Parkville\", \"909 Parkville\", \"91 West Melbourne (Residential)\", \"910 Parkville\", \"911 Parkville\", \"912 Parkville\", \"913 Parkville\", \"914 Parkville\", \"915 Parkville\", \"916 Parkville\", \"917 Parkville\", \"918 Parkville\", \"919 Parkville\", \"92 West Melbourne (Residential)\", \"920 Parkville\", \"921 Parkville\", \"922 Parkville\", \"923 Parkville\", \"924 Parkville\", \"925 Parkville\", \"926 Parkville\", \"927 Parkville\", \"928 Parkville\", \"929 Parkville\", \"93 CBD West\", \"930 Parkville\", \"931 Parkville\", \"94 CBD East\", \"95 CBD East\", \"96 CBD East\", \"97 CBD East\", \"98 CBD East\"]"
+    }
+  ]
 }

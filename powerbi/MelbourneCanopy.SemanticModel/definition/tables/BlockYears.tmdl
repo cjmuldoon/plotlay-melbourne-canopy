@@ -12,8 +12,8 @@ table BlockYears
 
 	column year
 		dataType: int64
-		isHidden
 		formatString: 0
+		isHidden
 		lineageTag: 9c870992-baa9-79b0-bc30-1d23e0d6edf9
 		summarizeBy: none
 		sourceColumn: year
@@ -44,4 +44,3 @@ table BlockYears
 				    Out
 
 	annotation PBI_ResultType = Table
-

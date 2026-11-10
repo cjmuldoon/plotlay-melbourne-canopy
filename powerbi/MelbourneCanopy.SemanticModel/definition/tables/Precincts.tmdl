@@ -62,4 +62,3 @@ table Precincts
 				    Typed
 
 	annotation PBI_ResultType = Table
-

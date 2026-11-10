@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "10c2f1e8de992f1bf1f3",
   "position": {
-    "x": 39.288256227758005,
-    "y": 3.4163701067615655,
+    "x": 40,
+    "y": 18,
     "z": 0,
-    "height": 90.533807829181484,
-    "width": 1839.7153024911031,
+    "height": 91,
+    "width": 1840,
     "tabOrder": 0
   },
   "visual": {
@@ -21,10 +21,10 @@
                   {
                     "value": "THE STREETS",
                     "textStyle": {
-                      "fontWeight": "bold",
-                      "fontFamily": "Segoe UI Semibold",
                       "fontSize": "24pt",
-                      "color": "#163c6e"
+                      "color": "#163c6e",
+                      "fontFamily": "Segoe UI Semibold",
+                      "fontWeight": "bold"
                     }
                   }
                 ]
@@ -34,9 +34,9 @@
                   {
                     "value": "Road corridor segments holding a council tree, keyed by seg_id in Plotlay, added up by street name.",
                     "textStyle": {
-                      "fontFamily": "Segoe UI",
                       "fontSize": "11pt",
-                      "color": "#5b6573"
+                      "color": "#5b6573",
+                      "fontFamily": "Segoe UI"
                     }
                   }
                 ]
